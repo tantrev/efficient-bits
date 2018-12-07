@@ -54,8 +54,8 @@ public class SmiToFps {
         while ((line = rdr.readLine()) != null) {
             try {
 
-                final IAtomContainer container = smipar.parseSmiles(line);
                 final String         id        = suffixedId(line);
+                final IAtomContainer container = smipar.parseSmiles(line);
                 final BitSet         bitSet    = fpr.getBitFingerprint(container).asBitSet();
 
                 StringBuilder sb = new StringBuilder();
